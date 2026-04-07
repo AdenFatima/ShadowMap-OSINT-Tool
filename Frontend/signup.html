@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="icon" href="./Images/Pixelated.png" type="image/png">
+    <link rel="stylesheet" href="./CSS-Files/signup.css">
+    <script>
+        if (localStorage.getItem("token")) {
+            window.location.href = "dashboard.html";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="signup-box">
+        <div class="left">
+            <h2>Create Account</h2>
+            <p>Join ShadowMap and discover the power of collaborative cybersecurity.</p>
+        </div>
+
+        <div class="right">
+            <form id="signupForm">
+                <input type="text" id="nameInput" placeholder="Username" required>
+                <input type="email" id="emailInput" placeholder="Email" required>
+                <input type="password" id="passwordInput" placeholder="Password" required>
+
+                <button type="submit">Signup</button>
+
+                <div class="login-link">
+                    Already have an account? <a href="login.html">Log In</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./JS-Files/signup.js"></script>
+</body>
+
+</html>

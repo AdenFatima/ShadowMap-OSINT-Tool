@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Images/Pixelated.png" type="image/png">
+    <link rel="stylesheet" href="./CSS-Files/dashboard.css">
+    <link rel="stylesheet" href="./CSS-Files/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Settings | ShadowMap</title>
+</head>
+
+<body>
+
+    <section class="dashboard-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <img src="./Images/Pixelated.png">
+                <div>
+                    <h3>ShadowMap</h3>
+                    <p>OSINT Dashboard</p>
+                </div>
+            </div>
+
+            <div class="menu">
+                <button onclick="window.location.href='dashboard.html'">
+                    <span><i class="fa-solid fa-house"></i></span>
+                    <span class="text">Dashboard</span>
+                </button>
+                <button onclick="window.location.href='image-intelligence.html'">
+                    <span><i class="fa-solid fa-image"></i></span>
+                    <span class="text">Image Intelligence</span>
+                </button>
+                <button onclick="window.location.href='username-recon.html'">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <span class="text">Username Recon</span>
+                </button>
+                <button onclick="window.location.href='settings.html'">
+                    <span><i class="fa-solid fa-gear"></i></span>
+                    <span class="text">Settings</span>
+                </button>
+            </div>
+
+            <!-- User profile bottom -->
+            <div class="user-profile">
+                <img src="./Images/default-picture.png">
+                <div class="user-info">
+                    <h4>user-name</h4>
+                    <button class="logout">Logout</button>
+                </div>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+            <!-- TOP BAR -->
+            <div class="top-bar">
+                <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+                <h2>Settings</h2>
+            </div>
+
+            <div class="settings-grid">
+
+                <div class="settings-card">
+                    <h3>General Profile</h3>
+                    <div class="profile-upload">
+                        <div class="avatar-preview">
+                            <img src="./Images/default-picture.png" alt="Profile" id="settings-avatar">
+                        </div>
+                        <div class="upload-controls">
+                            <label for="file-input" class="btn-upload">Change Photo</label>
+                            <input type="file" id="file-input" hidden>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Display Name</label>
+                        <input type="text" placeholder="user-name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="user@example.com">
+                    </div>
+                    <button class="btn-save">Save Profile</button>
+                </div>
+
+                <div class="settings-card">
+                    <h3>Update Password</h3>
+                    <div class="form-group">
+                        <label>Current Password</label>
+                        <input type="password" placeholder="••••••••">
+                    </div>
+                    <div class="form-group">
+                        <label>New Password</label>
+                        <input type="password" placeholder="New Password">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm New Password</label>
+                        <input type="password" placeholder="Confirm Password">
+                    </div>
+                    <button class="btn-save btn-security">Update Password</button>
+                    <!-- Will be implemented in phase 3 -->
+                    <!-- <p class="security-note">Last changed: 2 weeks ago</p> -->
+                </div>
+
+            </div>
+        </main>
+    </section>
+
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const sidebar = document.querySelector(".sidebar");
+
+        toggleBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("collapsed");
+        });
+    </script>
+
+    <script src="./JS-Files/auth.js"></script>
+</body>
+</html>

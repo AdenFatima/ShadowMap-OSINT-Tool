@@ -1,0 +1,53 @@
+
+        .about-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg'); /* Replace with your dark wavy bg */
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .stat-item h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color, white); /* Using a red accent like your reference */
+            margin-bottom: 5px;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        .gallery-main img {
+            width: 100%;
+            border-radius: 15px;
+            height: 475px;
+            object-fit: cover;
+        }
+
+        .gallery-side {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .gallery-side img {
+            width: 100%;
+            border-radius: 15px;
+            height: 230px;
+            object-fit: cover;
+        }

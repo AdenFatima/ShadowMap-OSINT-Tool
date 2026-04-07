@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Images/Pixelated.png" type="image/png">
+    <title>ShadowMap</title>
+    <link rel="stylesheet" href="./CSS-Files/style.css">
+    <link href='https://fonts.googleapis.com' rel='stylesheet'>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./Images/Pixelated.png" alt="Logo" class="logo-icon">
+                <span class="logo-text"><b>ShadowMap</b></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+            <div class="nav-button">
+                <a id="login-btn" href="login.html" class="btn btn-outline">Login</a>
+                <a id="register-btn" href="signup.html" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+
+            <h1 class="hero-title">
+                UNMASK THE <br> <span> INVISIBLE.</span>
+            </h1>
+
+            <p class="hero-description"> Discover hidden information in digital images with our advanced OSINT tools.
+            </p>
+
+            <div class="hero-button">
+                <a href="#" class="btn btn-large btn primary"> Start Analysing</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">CORE CAPABILITIES</span>
+                <h2 class="section-title">ADVANCE INTELLIGENCE FOR IMAGE ANALYSIS.</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="card-icon"></div>
+                    <h3 class="card-title">Username Recon</h3>
+                    <p class="card-description">
+                        Enter a username to find all associated accounts on various platforms.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Social Media</span>
+                        <span class="tag">Source website</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon"></div>
+                    <h3 class="card-title">Image Intelligence</h3>
+                    <p class="card-description">
+                        Cross-reference images across multiple search engines and social
+                        platforms to find the original source or related media.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Web Search</span>
+                        <span class="tag">Social Media</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon"></div>
+                    <h3 class="card-title">EXIF Extraction</h3>
+                    <p class="card-description">
+                        Extract hidden metadata from images including device information, timestamps, and GPS
+                        coordinates to map physical locations.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Geolocation</span>
+                        <span class="tag">Metadata</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon"></div>
+                    <h3 class="card-title">Image Forensics</h3>
+                    <p class="card-description">
+                        Analyze image compression and pixel data (ELA) to detect potential tampering, digital
+                        manipulation, or synthesized content.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Forensics</span>
+                        <span class="tag">Deepfake</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="split-section" id="network" style="background-color: var(--bg-secondary);">
+        <div class="container split-container">
+            <div class="split-content">
+                <span class="section-label">THE DETECTIVE'S BOARD</span>
+                <h2 class="section-title">CONNECT THE DOTS.</h2>
+                <p class="split-description">
+                    Uncover the hidden digital footprints. Just like a modern investigator's string board, our tools
+                    visualize the intricate relationships between profiles, websites, and metadata, helping you to find
+                    the missing link within an ocean of data.
+                </p>
+                <ul class="split-features">
+                    <li><span class="highlight-text">Identify</span> aliases and associated accounts.</li>
+                    <li><span class="highlight-text">Track</span> the origin of shared media files.</li>
+                    <li><span class="highlight-text">Map</span> out entire syndicates and shadow networks.</li>
+                </ul>
+
+            </div>
+
+            <div class="split-image-wrapper">
+                <div class="image-glow"></div>
+                <img src="./Images/osint-network.png" alt="OSINT Digital Network Board" class="split-image">
+            </div>
+        </div>
+    </section>
+
+    <hr style="border: none;">
+    <footer class="footer">
+        <div class="footer-title">
+            <img src="./Images/Pixelated.png" alt="ShadowMap Logo" class="logo-icon"> ShadowMap
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="footer-info">
+            <span>&copy; 2026 ShadowMap. All Rights Reserved.</span>
+            <span>Developers: Aden, Faraz & Rafay</span>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const token = localStorage.getItem("token");
+            const navButton = document.querySelector(".nav-button");
+            const heroButton = document.querySelector(".hero-button a");
+
+            if (token) {
+                // User is authenticated
+                if (navButton) {
+                    navButton.innerHTML = '<a href="dashboard.html" class="btn btn-primary">Dashboard</a>';
+                }
+                if (heroButton) {
+                    heroButton.href = "dashboard.html";
+                }
+            } else {
+                // User is not authenticated
+                if (heroButton) {
+                    heroButton.href = "login.html";
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

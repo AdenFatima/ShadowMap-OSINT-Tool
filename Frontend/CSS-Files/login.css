@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121212;
+    font-family: Arial, sans-serif;
+}
+
+/* MAIN BOX */
+.login-box {
+    width: 750px;
+    display: flex;
+    border-radius: 20px;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+
+    color: #e0e0e0;
+
+    animation: fadeSlide 0.8s ease;
+}
+
+/* LEFT SIDE */
+.left {
+    flex: 1;
+    padding: 20px;
+}
+
+.left h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.left p {
+    color: #aaa;
+}
+
+/* RIGHT SIDE */
+.right {
+    flex: 1;
+    padding: 20px;
+}
+
+/* INPUTS */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    outline: none;
+}
+
+.login-box input::placeholder {
+    color: #bbb;
+}
+
+/* OPTIONS ROW */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* REMEMBER ME */
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 8px;
+    color: #ccc;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.remember-me input {
+    accent-color: #888;
+    width: auto;
+    margin-bottom: 0;
+}
+
+/* FORGOT PASSWORD */
+.forgot-password {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    color: #fff;
+}
+
+/* BUTTON */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* SIGNUP LINK */
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ANIMATION */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
